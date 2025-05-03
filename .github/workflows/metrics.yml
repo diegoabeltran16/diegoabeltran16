@@ -1,7 +1,7 @@
 name: GitHub Metrics
 
 on:
-  schedule: [{ cron: "0 0 * * 0" }] # Corre cada domingo
+  schedule: [{ cron: "0 0 * * 0" }]  # Corre cada domingo
   workflow_dispatch:
 
 jobs:
@@ -12,7 +12,21 @@ jobs:
         with:
           token: ${{ secrets.METRICS_TOKEN }}
           filename: metrics.svg
-          base: header, repositories, activity
+
+          # Datos básicos
+          base: header, repositories
+
+          # Plugins activos
           plugin_languages: yes
           plugin_languages_ignored: html, css
           plugin_languages_limit: 5
+
+          plugin_topics: yes
+          plugin_topics_mode: icons
+
+          plugin_habits: yes
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+
+          plugin_stars: yes
+          plugin_stars_limit: 50
