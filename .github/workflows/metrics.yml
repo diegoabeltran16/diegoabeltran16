@@ -14,18 +14,13 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           filename: metrics.svg
           output_action: commit
-          committer_branch: generated  # <- Aquí es donde se guarda
+          committer_branch: generated
 
-          # Datos básicos
           base: header, repositories
 
-          # Plugins activos
           plugin_languages: yes
           plugin_languages_ignored: html, css
           plugin_languages_limit: 5
-
-          plugin_topics: yes
-          plugin_topics_mode: icons
 
           plugin_habits: yes
           plugin_habits_facts: yes
