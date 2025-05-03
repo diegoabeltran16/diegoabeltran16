@@ -8,10 +8,13 @@ jobs:
   metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@latest
+      - name: Generate metrics image
+        uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
-          output_action: none
+          filename: metrics.svg
+          output_action: commit
+          committer_branch: generated  # <- Aquí es donde se guarda
 
           # Datos básicos
           base: header, repositories
