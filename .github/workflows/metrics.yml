@@ -16,12 +16,9 @@ jobs:
           output_action: commit
           committer_branch: generated
 
-          base: header, repositories
+          base: header
 
           plugin_languages: yes
-          plugin_languages_ignored: html, css
-          plugin_languages_limit: 5
 
           plugin_habits: yes
-          plugin_habits_facts: yes
           plugin_habits_charts: yes
