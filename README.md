@@ -1,1 +1,1 @@
-![Metrics](https://github-metrics.vercel.app/api/diegoabeltran16)
+![Metrics](https://raw.githubusercontent.com/diegoabeltran16/generated/main/metrics.svg)
